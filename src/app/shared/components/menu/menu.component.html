@@ -1,0 +1,36 @@
+<header>
+
+  <div class="header">
+    <div id="logo">
+        <img class="logo-img" src="../../../assets/img/logo-t.png" alt="Logo Pet Village">
+    </div>
+
+
+
+    <div class="login">
+        <div *ngIf="logado" class="bag" routerLink="/carrinho">
+            <p *ngIf="logado" class="bag-itens">{{(user | async)?.carrinho.length}}</p>
+            <a><i class="bi bi-bag-heart"></i></a>
+        </div>
+
+        <span title="sair" *ngIf="logado" (click)="logout()"><i class="bi bi-box-arrow-right"></i></span>
+        <p *ngIf="logado == false" class="entrar" routerLink="/login">Entrar</p>
+    </div>
+  </div>
+</header>
+
+<nav>
+<div class="menu">
+
+  <ul>
+      <li (click)="menuMobile()" class="treeline-icon"><i class="bi bi-list"></i></li>
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/brinquedos">Brinquedos</a></li>
+      <li><a routerLink="/alimentacao">Alimentação</a></li>
+      <li><a routerLink="/diversos">Diversos</a></li>
+      <li><a routerLink="/contato">Contato</a></li>
+  </ul>
+</div>
+</nav>
+
+

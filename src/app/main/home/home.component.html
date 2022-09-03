@@ -1,0 +1,110 @@
+<!-- ***** SLIDER ***** -->
+<div id="banners-container">
+  <div class="carousel slide" id="slider" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <!-- slider 1 -->
+      <div class="carousel-item active" id="carouselExampleControls">
+        <a href="#">
+          <picture>
+            <source media="(max-width:768px)" srcset="../../assets/img/slide-1-pq.png">
+            <img src="../../assets/img/slide-1.png" alt="Coleção outono/Inverno Pet Village"
+              class="d-block w-100 img-fluid">
+          </picture>
+        </a>
+      </div>
+
+      <!-- slider 2 -->
+      <div class="carousel-item active" id="carouselExampleControls">
+        <a href="#">
+          <picture>
+            <source media="(max-width:768px)" srcset="../../assets/img/slide-2-pq.png">
+            <img src="../../assets/img/slide-2.png" alt="Alimentação Pet Village" class="d-block w-100 img-fluid">
+          </picture>
+        </a>
+      </div>
+
+      <!-- slider 3 -->
+      <div class="carousel-item active" id="carouselExampleControls">
+        <a href="#">
+          <picture>
+            <source media="(max-width:768px)" srcset="../../assets/img/slide-3-pq.png">
+            <img src="../../assets/img/slide-3.png" alt="Brinquedos Pet Village" class="d-block w-100 img-fluid">
+          </picture>
+        </a>
+      </div>
+
+      <!-- Botões do slider -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ***** PRODUTOS ***** -->
+<main id="produtos">
+  <div class="produtos">
+
+    <div class="card-unico">
+
+      <div class="info">
+        <h2>
+          Outono Village
+        </h2>
+        <p>
+          Está chegando a estação mais fria do ano, nossos amigos precisam estar bem quentinhos nesse
+          período e também super estilosos!
+        </p>
+
+        <a href="/diversos"><button class="btn">Ver mais</button></a>
+      </div>
+
+      <img src="../../assets/img/agasalhos.png" alt="Agasalhos para seu pet">
+    </div>
+
+    <h1>Mais Vendidos</h1>
+
+
+
+    <div class="row">
+      <div class="mais-vendidos col-md-6 col-lg-3" *ngFor="let p of produtos">
+        <div class="grid">
+          <div class="card ">
+            <div class="card-img" [class.indisponivel]="p.estoque == 0">
+              <p *ngIf="p.estoque == 0">Produto indisponivel</p>
+              <img [src]="p.img" [alt]="p.nome">
+            </div>
+            <h2>{{ p.nome }}</h2>
+            <p class="preco">{{ p.preco }}</p>
+            <button [disabled]="p.estoque == 0" class="btn btn-comprar" (click)="addItemAoCarrinho(p)">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD brinquedos -->
+    <div class="card-unico">
+
+
+      <div class="info">
+        <h2>
+          Brinquedos
+        </h2>
+        <p>
+          Garanta a diversão do seu pet com nossa variedade de brinquedos
+        </p>
+
+        <a href="/brinquedos"><button class="btn">Ver mais</button></a>
+      </div>
+
+      <img src="../../assets/img/brinquedos.png" alt="Ração Guabi">
+    </div>
+  </div>
+</main>

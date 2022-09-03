@@ -1,0 +1,29 @@
+<section>
+
+  <div *ngIf="alertaSucesso"  class="alert alert-success alert-dismissible">
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    Cadastro realizado com sucesso!
+  </div>
+
+  <div *ngIf="alertaSucesso === false" class="alert alert-danger alert-dismissible">
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    Falha ao cadastrar. Verifique seus dados e tente novamente.
+  </div>
+
+  <form [formGroup]="FormUser" (ngSubmit)="onSubmit()">
+    <h1>Cadastre-se</h1>
+
+    <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example" placeholder="Digite seu nome" formControlName="nome">
+
+      <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example" placeholder="Digite seu e-mail" formControlName="email">
+
+      <div class="row">
+        <input class="form-control form-control-lg col-6" type="password" placeholder=".form-control-lg" aria-label=".form-control-lg example" placeholder="Digite sua senha" formControlName="senha1">
+
+        <input class="form-control form-control-lg col-6" type="password" placeholder=".form-control-lg" aria-label=".form-control-lg example" placeholder="Confirme sua senha" formControlName="senha2">
+      </div>
+
+      <button class="btn" [disabled]="!FormUser.valid"> Cadastrar </button>
+  </form>
+
+</section>

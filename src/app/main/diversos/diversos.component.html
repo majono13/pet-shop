@@ -1,0 +1,52 @@
+<div class="banners">
+  <div>
+          <picture>
+                  <source media="(max-width:768px)" srcset="../../assets/img/banner-diversas-pq.png">
+                  <img src="../../assets/img/banner-diversas.png" alt="Coleção outono/Inverno Pet Village"
+                      class="d-block w-100 img-fluid">
+              </picture>
+  </div>
+</div>
+
+<main id="main">
+  <div class="produtos">
+    <h1>Diversos para Gatos</h1>
+
+    <div class="row">
+      <div class="col-md-6 col-lg-3" *ngFor="let d of diversos">
+        <div class="grid">
+          <div class="card ">
+            <div class="card-img" [class.indisponivel]="d.estoque == 0">
+              <p *ngIf="d.estoque == 0">Produto indisponivel</p>
+              <img  [src]="d.img" [alt]="d.nome">
+            </div>
+            <h2>{{ d.nome }}</h2>
+            <p class="preco">{{ d.preco }}</p>
+            <button [disabled]="d.estoque == 0" class="btn btn-comprar" (click)="addItemAoCarrinho(d)">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+          <h1>
+              Coleção Outono Village
+          </h1>
+
+          <div class="row">
+            <div class="mcol-md-6 col-lg-3" *ngFor="let r of roupinhas">
+              <div class="grid">
+                <div class="card ">
+                  <div class="card-img" [class.indisponivel]="r.estoque == 0">
+                    <p *ngIf="r.estoque == 0">Produto indisponivel</p>
+                    <img  [src]="r.img" [alt]="r.nome">
+                  </div>
+                  <h2>{{ r.nome }}</h2>
+                  <p class="preco">{{ r.preco }}</p>
+                  <button [disabled]="r.estoque == 0" class="btn btn-comprar" [value]="r.nome">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+  </div>
+
+</main>
+

@@ -1,0 +1,33 @@
+<div class="banners">
+  <div>
+          <picture>
+                  <source media="(max-width:768px)" srcset="../../assets/img/banner-brinquedos-pq.png">
+                  <img src="../../assets/img/banner-brinquedos.png" alt="Coleção outono/Inverno Pet Village"
+                      class="d-block w-100 img-fluid">
+              </picture>
+  </div>
+</div>
+
+<main id="main">
+  <div class="produtos">
+    <h1>Diversão garantida</h1>
+
+    <div class="row">
+      <div class="col-md-6 col-lg-3" *ngFor="let b of brinquedos">
+        <div class="grid">
+          <div class="card ">
+            <div class="card-img" [class.indisponivel]="b.estoque == 0">
+              <p *ngIf="b.estoque == 0">Produto indisponivel</p>
+              <img  [src]="b.img" [alt]="b.nome">
+            </div>
+            <h2>{{ b.nome }}</h2>
+            <p class="preco">{{ b.preco }}</p>
+            <button [disabled]="b.estoque == 0" class="btn btn-comprar" (click)="addItemAoCarrinho(b)">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</main>

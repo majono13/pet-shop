@@ -1,0 +1,13 @@
+<section>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <h1>Login</h1>
+
+      <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example" placeholder="Digite seu e-mail" formControlName="email">
+      <input class="form-control form-control-lg" type="password" placeholder=".form-control-lg" aria-label=".form-control-lg example" placeholder="Digite sua senha" formControlName="senha">
+
+      <button type="submit" class="btn" [disabled]="!loginForm.valid">Entrar</button>
+  </form>
+
+
+  <span> Não tem uma conta? <a routerLink="/registro">Cadastre-se</a></span>
+</section>

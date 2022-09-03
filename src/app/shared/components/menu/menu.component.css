@@ -1,0 +1,222 @@
+.menu,.header {
+  max-width: 1500px;
+  margin: auto;
+}
+
+/***********HEADER**********/
+header {
+  background-image: linear-gradient(to right, #B8A0D9, #5c4168);
+  max-width: 100%;
+}
+
+.logo-img {
+  width: 150px;
+}
+
+.header {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+.search {
+  background-color: transparent;
+  border: none;
+  color: black;
+  outline: 0;
+  font-size: 1em;
+  color:white;
+
+}
+
+.search::placeholder {
+  color: white;
+}
+
+.bi-search {
+  padding-right: 10px;
+}
+
+header .bi {
+  color: white;
+  font-size: 1.3em;
+}
+
+/********LOGIN E CARRINHO*******/
+.login {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+  color: white;
+  margin-right: 10px;
+}
+
+.login p, span {
+  margin-bottom: 0;
+  font-size: 1.2em;
+}
+
+.login i {
+  font-size: 2em;
+  cursor: pointer;
+}
+
+
+.bag-itens {
+  float:right;
+  padding: 5px;
+  background-color: rgb(252, 72, 72);
+  padding: 0px 10px;
+  border-radius:100%;
+  margin-right: 40px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.404);
+
+}
+
+.entrar {
+  font-size: 1.2em;
+  font-family: var(--font-title);
+}
+
+/*********************/
+
+/********MENU *************/
+nav {
+  background-color: var(--cor2);
+  text-align: left;
+}
+nav ul li {
+  list-style: none;
+  padding: 10px;
+}
+
+nav ul{
+  display: flex;
+  background-color: var(--cor2);
+  margin-bottom: 0;
+}
+
+nav a {
+  font-family: var(--font-title);
+  font-size: 1.2em;
+
+  text-decoration: none;
+  color:white;
+}
+
+nav a:hover, .login p:hover {
+  border-bottom: 1px solid var(--cor1);
+  color: white;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+/***SLIDERS E BANNERS*********/
+.banners img {
+  width: 100%;
+}
+.banners div {
+  text-align: center;
+}
+
+/*********** MENU MOBILE ***********/
+.treeline-icon {
+  font-family: var(--font-title);
+  font-size: 2em;
+  color:white;
+
+  display: none;
+}
+
+@media(max-width:900px) {
+
+  body {
+      overflow-x: hidden;
+  }
+
+  nav ul a {
+      display: none;
+  }
+
+
+  .treeline-icon {
+      display: block;
+      cursor: pointer;
+  }
+
+  /********* HEADER MOBILE******/
+
+  .header {
+      display: block;
+      padding: 10px;
+  }
+  .login {
+      justify-content: end;
+      padding-top: 20px;
+  }
+
+  header form {
+      margin: 20px auto 0 auto;
+      min-width: 200px;
+  }
+
+  #logo {
+      text-align: center;
+      margin: auto;
+  }
+
+  .login p {
+      font-size: 1.1em;
+  }
+
+  .login i {
+      font-size: 1.7em;
+  }
+
+
+
+  /******** Menu Mobile **********/
+
+  .menu-mobile {
+      display: block;
+
+      animation-name: menu-animation;
+      animation-duration: 1s;
+
+  }
+  .menu-mobile ul {
+      display: inline-block;
+
+  }
+
+  .menu-mobile ul a{
+      display: block;
+      text-align: left;
+  }
+
+  .menu-mobile a {
+      font-size: 1em;
+  }
+
+  /*Animação*/
+
+  @keyframes menu-animation {
+      0% {
+          /*condição ao 0% (quando abre a página)*/
+          opacity: 0;
+          transform: translateX(-30px);
+      }
+
+      100% {
+          /*condição aos 100% (quando a página carrega*/
+          opacity: 1;
+          transform: translate(0, 0px);
+      }
+  }
+}

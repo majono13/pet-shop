@@ -1,27 +1,38 @@
-# PetShop
+<h1 align="center">App PetShop Online</h1>
+<h3> Pet Village </h3>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
+![Badge em Desenvolvimento](https://img.shields.io/badge/Status-Conclu%C3%ADdo-green)
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<p>Este é um projeto pessoal, desenvolvildo com Angular v13 e firebase. O app se trata de uma loja online (petshop), onde é possível se cadastrar e adicionar itens ao carrinho de compras</p>
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<h3>Funcionalidades</h3>
 
-## Build
+1 - Cadastro de usuário: somente usuário autenticados podem adicionar itens ao carrinho de compras.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2 - Responsividade: a aplicação é responsiva, podendo ser usada tanto em computadores quanto em celulares e tabletes.
 
-## Running unit tests
+3 - Conexão ao banco de dados: todos os produtos, e as informações destes, vem de um banco de dados no firebase.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+4 - Adicionar e remover itens ao carrinho: uma vez cadastrado, o usuário pode adicionar os itens de interesse ao carrinho, e também removê-los. Ao clicar em finalizar compra, o carrinho do usuário é esvaziado e os produtos "comprados" são descontados do estoque no banco de dados.
 
-## Running end-to-end tests
+<h3 align="center">📁 Acesso ao projeto 👇</h3>
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+https://pet-shop-a3084.firebaseapp.com/
 
-## Further help
+<h3>✅ Tecnologias Utilizadas</h3>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+➡️ Angular 13
+
+➡️ Firebase
+
+➡️ Bootstrap 5
+
+➡️ Typescript
+
+➡️HTML 5
+
+➡️ CSS 3
+
+➡️ Para criação do design (identidade da marca): Gimp, canva entre outros.
